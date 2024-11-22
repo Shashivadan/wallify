@@ -1,12 +1,13 @@
-import { NextResponse, type NextRequest } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 import * as fs from "fs/promises";
 import * as path from "path";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { image: string } }
+  { params }: { params: Promise<{ image: string }> }
 ) {
   const { image } = await params;
+
   if (image) {
     const filePath = path.join(
       process.cwd(),
@@ -14,16 +15,6 @@ export async function GET(
       "walls",
       `${image}.jpg`
     );
-
-    function generateRandomNumbers() {
-      const randomNumber = (Math.random() * 248)
-        .toFixed(0)
-        .toString()
-        .padStart(4, "0");
-      return randomNumber;
-    }
-
-    console.log("random number", generateRandomNumbers());
 
     try {
       const file = await fs.readFile(filePath);
