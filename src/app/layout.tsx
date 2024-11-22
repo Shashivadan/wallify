@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { RootProvider } from "fumadocs-ui/provider";
+import { ThemeProvider } from "next-themes";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,15 +31,17 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        // you can use Tailwind CSS too
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-screen-2xl mx-auto`}
         style={{
           display: "flex",
           flexDirection: "column",
           minHeight: "100vh",
         }}
+        defaultValue={"system"}
       >
-        <RootProvider>{children}</RootProvider>
+        <ThemeProvider attribute="class" disableTransitionOnChange>
+          <RootProvider>{children}</RootProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
