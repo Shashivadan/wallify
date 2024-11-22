@@ -1,37 +1,12 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+**Wallify: Your Random Wallpaper Generator**  
 
-## Getting Started
+Wallify is a sleek and user-friendly app that redefines how you personalize your devices. With a single tap, Wallify generates stunning, high-quality wallpapers tailored to your preferences. Whether you're looking for breathtaking landscapes, abstract art, or minimalistic designs, Wallify has it all.  
 
-First, run the development server:
+**Features:**  
+- 🌈 **Endless Variety**: Discover unique wallpapers every time with its random generator.  
+- 🎨 **Custom Categories**: Filter wallpapers based on your mood or style preference.  
+- 🌟 **HD Quality**: All wallpapers are optimized for high-resolution screens.  
+- 🔄 **One-Tap Refresh**: Not feeling it? Swipe to generate a new masterpiece instantly.  
+- 📂 **Favorites Collection**: Save your favorites for easy access later.  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# wallify
+Transform your screen daily with Wallify and let your wallpaper tell a story. Creativity is just a swipe away!  
