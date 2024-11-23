@@ -1,12 +1,9 @@
-// React and Next.js imports
 import Image from "next/image";
 import Link from "next/link";
 
-// Third-party library imports
 import Balancer from "react-wrap-balancer";
 import { ArrowRight, Download } from "lucide-react";
 
-// Local component imports
 import { Section, Container } from "@/components/landing/craft";
 import { Button } from "@/components/ui/button";
 
@@ -15,30 +12,24 @@ const Hero = () => {
     <Section className="py-8 md:py-12 lg:py-16">
       <Container className="px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-[1400px]">
-          {/* Top Badge */}
           <Button
             asChild
             className="mb-4 md:mb-6 w-fit hover:scale-105 transition-transform"
             size={"sm"}
             variant={"outline"}
           >
-            <Link
-              className="not-prose text-sm sm:text-base"
-              href="https://9d8.dev"
-            >
-              Explore Our Collection{" "}
+            <Link className="not-prose text-sm sm:text-base" href="/docs">
+              Explore Our API Docs{" "}
               <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1" />
             </Link>
           </Button>
 
-          {/* Main Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-bold tracking-tight">
             <Balancer>
               Transform Your Screen with Stunning High-Resolution Wallpapers
             </Balancer>
           </h1>
 
-          {/* Subheading */}
           <h3 className="text-muted-foreground mt-4 md:mt-6 text-base sm:text-lg md:text-lg max-w-[800px]">
             <Balancer>
               Discover a curated collection of 248 breathtaking wallpapers, from
@@ -48,7 +39,6 @@ const Hero = () => {
             </Balancer>
           </h3>
 
-          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 md:mt-8 mb-8 md:mb-12">
             <Button
               asChild
@@ -80,7 +70,6 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Hero Image Container */}
           <div className="not-prose relative group cursor-pointer w-full overflow-hidden rounded-lg sm:rounded-xl border bg-black">
             <div className="aspect-video md:aspect-[21/9] relative">
               <Image
