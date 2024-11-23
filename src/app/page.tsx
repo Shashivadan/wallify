@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <Section className="py-8 md:py-12 lg:py-16">
+    <Section className="py-8 md:py-12 lg:py-16 ">
       <Container className="px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-[1400px]">
           <Button

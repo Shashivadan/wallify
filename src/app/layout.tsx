@@ -32,16 +32,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning={true}>
       <body
         suppressHydrationWarning={true}
-        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-screen-2xl mx-auto`}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          minHeight: "100vh",
-        }}
-        defaultValue={"system"}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased   `}
+        defaultValue={"dark"}
       >
-        <ThemeProvider attribute="class" disableTransitionOnChange>
-          <RootProvider>{children}</RootProvider>
+        <ThemeProvider attribute="class">
+          <RootProvider>
+            <main className="">{children}</main>
+          </RootProvider>
         </ThemeProvider>
       </body>
     </html>

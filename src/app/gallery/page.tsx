@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { BookAIcon, Download, Fullscreen, MoveLeft } from "lucide-react";
+import { BookAIcon, Download, MoveLeft } from "lucide-react";
 import {
   Pagination,
   PaginationContent,
@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/pagination";
 import { CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import ImageDialog from "@/components/image-dialog";
 
 const generateImageNumbers = (start: number, end: number) => {
   return Array.from({ length: end - start + 1 }, (_, i) =>
@@ -67,7 +68,7 @@ export default async function GalleryPage({
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b w-full ">
+    <div className="min-h-screen max-w-screen-2xl mx-auto bg-gradient-to-b w-full ">
       <div className="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
         <div className="mb-12 md:mb-16 text-center">
           <h1 className="text-4xl md:text-5xl  font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-foreground">
@@ -95,7 +96,7 @@ export default async function GalleryPage({
           {images.map((imageNumber) => (
             <div
               key={imageNumber}
-              className="group rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-primary/20"
+              className="group rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-primary/20"
             >
               <CardContent className="p-0 aspect-video relative">
                 <Image
@@ -111,21 +112,13 @@ export default async function GalleryPage({
                   <Button
                     asChild
                     variant="ghost"
-                    className=" bg-transparent   transition-all duration-300 transform scale-90 group-hover:scale-100 hover:bg-transparent backdrop-blur-3xl "
+                    className=" transition-all bg-transparent duration-300 transform hover:scale-110 hover:bg-black/20"
                   >
                     <a href={`/walls/${imageNumber}.jpg`} download>
                       <Download className="w-4 h-4 " />
                     </a>
                   </Button>
-                  <Button
-                    asChild
-                    variant="ghost"
-                    className="transition-all bg-transparent duration-300 transform scale-90 group-hover:scale-100 hover:bg-transparent backdrop-blur-3xl"
-                  >
-                    <Link href={`/api/wallpapers/${imageNumber}`} download>
-                      <Fullscreen className="w-4 h-4" />
-                    </Link>
-                  </Button>
+                  <ImageDialog source={`/walls/${imageNumber}.jpg`} />
                 </div>
               </CardContent>
             </div>

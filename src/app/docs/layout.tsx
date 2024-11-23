@@ -98,7 +98,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         </div>
       </div>
 
-      <div className="relative z-10">
+      <div className="relative z-10 mx-auto max-w-screen-2xl">
         <DocNavBar />
         <DocsLayout {...docsOptions}>{children}</DocsLayout>
       </div>
