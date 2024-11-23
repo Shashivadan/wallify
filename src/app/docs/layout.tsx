@@ -3,6 +3,7 @@ import { DocsLayout, type DocsLayoutProps } from "fumadocs-ui/layouts/docs";
 import type { ReactNode } from "react";
 import { baseOptions, linkItems } from "@/app/layout.config";
 import { Slot } from "@radix-ui/react-slot";
+import DocNavBar from "@/components/doc-navbar";
 
 const docsOptions: DocsLayoutProps = {
   ...baseOptions,
@@ -98,6 +99,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       </div>
 
       <div className="relative z-10">
+        <DocNavBar />
         <DocsLayout {...docsOptions}>{children}</DocsLayout>
       </div>
     </main>
