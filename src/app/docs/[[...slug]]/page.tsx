@@ -9,6 +9,7 @@ import { notFound } from "next/navigation";
 import defaultMdxComponents from "fumadocs-ui/mdx";
 import { metadataImage } from "@/lib/metadata";
 import { openapi } from "@/lib/source";
+import { Card, Cards } from "fumadocs-ui/components/card";
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -25,7 +26,12 @@ export default async function Page(props: {
       <DocsDescription>{page.data.description}</DocsDescription>
       <DocsBody>
         <MDX
-          components={{ ...defaultMdxComponents, APIPage: openapi.APIPage }}
+          components={{
+            ...defaultMdxComponents,
+            APIPage: openapi.APIPage,
+            Card,
+            Cards,
+          }}
         />
       </DocsBody>
     </DocsPage>
