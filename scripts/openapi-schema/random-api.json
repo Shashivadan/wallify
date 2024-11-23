@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Random Wallpapers API",
+    "description": "API endpoint for retrieving a random wallpaper from the collection",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Development server"
+    }
+  ],
+  "paths": {
+    "/api/wallpapers/random": {
+      "get": {
+        "operationId": "getRandomWallpaper",
+        "summary": "Retrieve a random wallpaper",
+        "description": "Returns a random JPEG wallpaper image from the collection of 248 wallpapers",
+        "responses": {
+          "200": {
+            "description": "Random wallpaper image retrieved successfully",
+            "content": {
+              "image/jpeg": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Wallpaper not found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "example": "Image not found"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}

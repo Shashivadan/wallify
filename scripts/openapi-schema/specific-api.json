@@ -1,0 +1,68 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Wallpapers API - 0001 to 0148",
+    "description": "wallpaper API endpoint for retrieving wallpaper images from 0001 to 0148",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Development server"
+    }
+  ],
+  "paths": {
+    "/api/wallpapers/{image}": {
+      "get": {
+        "operationId": "getWallpaperById",
+        "summary": "Retrieve a wallpaper",
+        "description": "Retrieves a JPEG wallpaper image based on the provided image number (0001-0248)",
+        "parameters": [
+          {
+            "name": "image",
+            "in": "path",
+            "required": true,
+            "description": "The image number between 0001 and 0248",
+            "schema": {
+              "type": "string",
+              "pattern": "^0[0-9]{3}$",
+              "minLength": 4,
+              "maxLength": 4,
+              "minimum": "0001",
+              "maximum": "0248",
+              "default": "0001",
+              "examples": ["0001", "0042", "0248"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Wallpaper image retrieved successfully",
+            "content": {
+              "image/jpeg": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Wallpaper not found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "example": "Image not found"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}

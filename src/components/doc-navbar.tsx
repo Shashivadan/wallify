@@ -1,5 +1,4 @@
 import React from "react";
-import { Github, Twitter } from "lucide-react";
 import { Banner } from "fumadocs-ui/components/banner";
 import Image from "next/image";
 
@@ -7,7 +6,7 @@ const DocNavBar = () => {
   return (
     <Banner
       variant="rainbow"
-      className="bg-transparent backdrop-blur-sm flex justify-between"
+      className="bg-transparent backdrop-blur-2xl backdrop:bg-black md:backdrop-blur-sm flex justify-between"
     >
       <div className="">
         <div className="flex items-center space-x-2">

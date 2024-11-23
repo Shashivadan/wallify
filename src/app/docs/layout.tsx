@@ -35,7 +35,7 @@ const docsOptions: DocsLayoutProps = {
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <main className="relative min-h-screen">
+    <main className="relative min-h-screen" suppressHydrationWarning>
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div
           className="absolute inset-0 h-[64rem] max-h-screen"
