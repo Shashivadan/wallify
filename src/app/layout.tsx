@@ -24,6 +24,8 @@ export const metadata: Metadata = {
   description:
     "Discover and download high-quality wallpapers for your desktop and mobile devices. New wallpapers added daily, all available in HD and 4K resolution.",
   keywords: [
+    "https://wallify.lab-x.xyz/",
+    "wallify",
     "wallpapers",
     "HD wallpapers",
     "4K wallpapers",
