@@ -16,7 +16,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://your-domain.com"),
+  metadataBase: new URL("https://wallify.lab-x.xyz"),
   title: {
     default: "HD Wallpapers Collection | Free Download",
     template: "%s | Your Wallpaper App",
@@ -59,13 +59,13 @@ export const metadata: Metadata = {
       "Discover and download high-quality wallpapers for your desktop and mobile devices. New wallpapers added daily, all available in HD and 4K resolution.",
     images: [
       {
-        url: "/og.png",
+        url: "https://wallify.lab-x.xyz/og.png",
         width: 1200,
         height: 630,
         alt: "wallify",
       },
       {
-        url: "/og.png",
+        url: "https://wallify.lab-x.xyz/og.png",
         width: 600,
         height: 600,
         alt: "wallify",
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
       "Discover and download high-quality wallpapers for your desktop and mobile devices. New wallpapers added daily.",
     creator: "@shashivadan",
     site: "shashivadan.xyz",
-    images: ["/og.png"],
+    images: ["https://wallify.lab-x.xyz/og.png"],
   },
 
   applicationName: "wallify",
@@ -91,12 +91,13 @@ export const metadata: Metadata = {
     title: "wallify",
     statusBarStyle: "black-translucent",
   },
-  manifest: "/manifest.json",
 
-  // Icons
   icons: {
-    icon: [{ url: "/icon.png" }, { url: "/icon.png", type: "image/png" }],
-    apple: [{ url: "/icon.png" }],
+    icon: [
+      { url: "https://wallify.lab-x.xyz/icon.png" },
+      { url: "https://wallify.lab-x.xyz/icon.png", type: "image/png" },
+    ],
+    apple: [{ url: "https://wallify.lab-x.xyz/icon.png" }],
   },
   robots: {
     index: true,
