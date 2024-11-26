@@ -30,19 +30,11 @@ export const metadata: Metadata = {
     description: site.description,
     siteName: "Wallify",
     locale: "en_US",
-    images: [
-      {
-        url: "https://wallify.lab-x.xyz/og.png",
-        width: 1200,
-        height: 645,
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: site.title,
     description: site.description,
-    images: ["https://wallify.lab-x.xyz/og.png"],
   },
 };
 
