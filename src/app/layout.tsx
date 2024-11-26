@@ -19,7 +19,6 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: site.title,
   description: site.description,
-  metadataBase: new URL("https://wallify.lab-x.xyz"),
   icons: {
     icon: "/icon.png",
   },
