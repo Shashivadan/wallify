@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  category: "Photography",
+  category: "technology",
   openGraph: {
     type: "website",
     siteName: "wallify",
@@ -71,6 +71,7 @@ export const metadata: Metadata = {
         alt: "wallify",
       },
     ],
+
     locale: "en_US",
     emails: ["contact@lab-x.com"],
   },
@@ -93,10 +94,7 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: [
-      { url: "https://wallify.lab-x.xyz/icon.png" },
-      { url: "https://wallify.lab-x.xyz/icon.png", type: "image/png" },
-    ],
+    icon: [{ url: "https://wallify.lab-x.xyz/icon.png", type: "image/png" }],
     apple: [{ url: "https://wallify.lab-x.xyz/icon.png" }],
   },
   robots: {
@@ -124,7 +122,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased   `}
         defaultValue={"dark"}
       >
-        <ThemeProvider attribute="class">
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <RootProvider>
             <main className="">{children}</main>
           </RootProvider>
