@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/icon.png",
   },
+  verification: {
+    google: "2w5MBwEPQ9Tlk7nioAiNP5SGrVKQ_UTfDML_swHFaQs",
+  },
   openGraph: {
     type: "website",
     url: "/",
