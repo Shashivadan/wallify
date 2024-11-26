@@ -4,6 +4,7 @@ import "./globals.css";
 import { RootProvider } from "fumadocs-ui/provider";
 import { ThemeProvider } from "next-themes";
 
+import { site } from "@/lib/site";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -16,97 +17,31 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://wallify.lab-x.xyz"),
-  title: {
-    default: "HD Wallpapers Collection | Free Download",
-    template: "%s | Your Wallpaper App",
+  title: site.title,
+  description: site.description,
+  icons: {
+    icon: "/icon.png",
   },
-  description:
-    "Discover and download high-quality wallpapers for your desktop and mobile devices. New wallpapers added daily, all available in HD and 4K resolution.",
-  keywords: [
-    "https://wallify.lab-x.xyz/",
-    "wallify",
-    "wallpapers",
-    "HD wallpapers",
-    "4K wallpapers",
-    "desktop backgrounds",
-    "mobile wallpapers",
-    "free wallpapers",
-    "nature wallpapers",
-    "abstract wallpapers",
-    "landscape wallpapers",
-    "minimal wallpapers",
-  ],
-  authors: [
-    {
-      name: "Your Name",
-      url: "https://wallify.lab-x.xyz/",
-    },
-  ],
-  creator: "shashivadan",
-  publisher: "Your Wallpaper App",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  category: "technology",
   openGraph: {
     type: "website",
-    siteName: "wallify",
-    title: " wallify :  Wallpapers Collection | Free Download",
-    description:
-      "Discover and download high-quality wallpapers for your desktop and mobile devices. New wallpapers added daily, all available in HD and 4K resolution.",
+    url: "https://wallify.lab-x.xyz/",
+    title: site.title,
+    description: site.description,
     images: [
       {
-        url: "https://wallify.lab-x.xyz/og.png",
+        url: "https://opengraph.b-cdn.net/production/images/a7067227-0f3b-4ac5-9e7d-5b57769150ee.png?token=yXA6RR4X-r1tCiG1FWdev9-hdY-2PKssOP_bmYe_97w&height=645&width=1200&expires=33268631397",
         width: 1200,
-        height: 630,
-        alt: "wallify",
-      },
-      {
-        url: "https://wallify.lab-x.xyz/og.png",
-        width: 600,
-        height: 600,
-        alt: "wallify",
+        height: 645,
       },
     ],
-
-    locale: "en_US",
-    emails: ["contact@lab-x.com"],
   },
-
   twitter: {
-    card: "summary",
-    title: "wallify: Wallpapers Collection | Free Download",
-    description:
-      "Discover and download high-quality wallpapers for your desktop and mobile devices. New wallpapers added daily.",
-    creator: "@shashivadan",
-    site: "shashivadan.xyz",
-    images: ["https://wallify.lab-x.xyz/og.png"],
-  },
-
-  applicationName: "wallify",
-  appleWebApp: {
-    capable: true,
-    title: "wallify",
-    statusBarStyle: "black-translucent",
-  },
-
-  icons: {
-    icon: [{ url: "https://wallify.lab-x.xyz/icon.png", type: "image/png" }],
-    apple: [{ url: "https://wallify.lab-x.xyz/icon.png" }],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+    card: "summary_large_image",
+    title: site.title,
+    description: site.description,
+    images: [
+      "https://opengraph.b-cdn.net/production/images/a7067227-0f3b-4ac5-9e7d-5b57769150ee.png?token=yXA6RR4X-r1tCiG1FWdev9-hdY-2PKssOP_bmYe_97w&height=645&width=1200&expires=33268631397",
+    ],
   },
 };
 
