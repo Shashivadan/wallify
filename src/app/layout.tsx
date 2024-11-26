@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/og.png",
+        url: "https://wallify.lab-x.xyz/og.png",
         width: 1200,
         height: 645,
       },
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: site.title,
     description: site.description,
-    images: ["/og-image.png"],
+    images: ["https://wallify.lab-x.xyz/og.png"],
   },
 };
 
