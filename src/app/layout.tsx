@@ -17,6 +17,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+  robots: "follow, index",
   title: site.title,
   description: site.description,
   icons: {
