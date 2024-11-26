@@ -19,17 +19,20 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: site.title,
   description: site.description,
+  metadataBase: new URL("https://wallify.lab-x.xyz"),
   icons: {
     icon: "/icon.png",
   },
   openGraph: {
     type: "website",
-    url: "https://wallify.lab-x.xyz/",
+    url: "/",
     title: site.title,
     description: site.description,
+    siteName: "Wallify",
+    locale: "en_US",
     images: [
       {
-        url: "https://opengraph.b-cdn.net/production/images/a7067227-0f3b-4ac5-9e7d-5b57769150ee.png?token=yXA6RR4X-r1tCiG1FWdev9-hdY-2PKssOP_bmYe_97w&height=645&width=1200&expires=33268631397",
+        url: "/og.png",
         width: 1200,
         height: 645,
       },
@@ -39,9 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: site.title,
     description: site.description,
-    images: [
-      "https://opengraph.b-cdn.net/production/images/a7067227-0f3b-4ac5-9e7d-5b57769150ee.png?token=yXA6RR4X-r1tCiG1FWdev9-hdY-2PKssOP_bmYe_97w&height=645&width=1200&expires=33268631397",
-    ],
+    images: ["/og-image.png"],
   },
 };
 
