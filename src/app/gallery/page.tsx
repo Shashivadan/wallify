@@ -18,7 +18,7 @@ import DownloadButton from "@/components/download-button";
 
 const generateImageNumbers = (start: number, end: number) => {
   return Array.from({ length: end - start + 1 }, (_, i) =>
-    String(start + i).padStart(4, "0")
+    String(start + i).padStart(4, "0"),
   );
 };
 
@@ -28,6 +28,7 @@ export const metadata = {
 };
 
 // export const dynamic = "force-dynamic";
+// iio
 
 export default async function GalleryPage({
   searchParams,
